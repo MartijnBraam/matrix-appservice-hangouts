@@ -128,6 +128,9 @@ class HangoutsClient:
             await hangups.build_user_conversation_list(self.client)
             )
 
+        log.debug('{} known users'.format(len(user_list.get_all())))
+        log.debug('{} known conversations'.format(len(conversation_list.get_all())))
+
         self.user_list = user_list
         self.conversation_list = conversation_list
 
